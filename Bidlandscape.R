@@ -99,19 +99,8 @@ p6<- p + geom_bar(aes(x=Bid.ranges,y=cumsum(revenuelost)),stat="identity") + ggt
 multiplot(p1, p2, p3,p4,p5,p6,cols=3)
 
 }
-##CUMULATIVE SUM
-newdf<-adxquerydata[adxquerydata$Advertisers=='ValueClick',]
-cumsum(x=adxquerydata$revenuelost,)
-
+#select advertiser with most bids from TopAdvertiserBids list
 adbids(TopAdvertisersBids[1,1],0,10)
-adbids(TopAdvertisersBids[3,1],,5)
-adbids(TopAdvertisersBids[4,1])
-adbids(TopAdvertisersBids[5,1])
-adbids(TopAdvertisersBids[6,1],37)
 
-p<-ggplot(adxquerydata[adxquerydata$Advertisers=='Other advertisers',])
-p1<- p + geom_bar(aes(x=Bid.ranges,y=Bids),stat="identity") + ggtitle('Other advertisers') #+ xlim(xmin,xmax)
 
-p1
-list(TopAdvertisersBids$Advertisers)
 
